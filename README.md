@@ -1,7 +1,7 @@
 # DSA_Assignment_1_2023-X3000
 Distributed Systems and Applications Assignment 1 on Restful APIs and Remote Invocation with Ballerina 
 
-# Q1: Restful API.
+# Q1: Faculty Manager using a Restful API.
 
 The goal is to create a Restful API to manage staff, offices, and courses within the Faculty of Computing and Informatics. Offices can have multiple lecturers, and each lecturer has attributes like staff number, office number, staff name, title, and a list of courses they teach. Courses have attributes like course name, course code, and NQF level. The API should provide these functions:
 - Add a new lecturer

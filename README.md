@@ -6,17 +6,27 @@ A library system using gRPC, and a restful API in ballerina.
 
 For Q-1:
 
-The problem centers on developing a Restful API for effectively managing staff, their offices, and allocated courses within the Faculty of Computing and Informatics. These offices can accommodate multiple lecturers. A lecturer is characterized by essential attributes, including a staff number, office number, staff name, title, and a list of the courses they are teaching. Additionally, a course is characterized by specific details such as the course name, course code, and NQF (National Qualifications Framework) level. The API should include the following functionalities: • Add a new lecturer • Retrieve a list of all lecturers within the faculty. • Update an existing lecturer's information. • Retrieve the details of a specific lecturer by their staff number. • Delete a lecturer's record by their staff number. • Retrieve all the lecturers that teach a certain course. • Retrieve all the lecturers that sit in the same office.
+The goal is to create a Restful API to manage staff, offices, and courses within the Faculty of Computing and Informatics. Offices can have multiple lecturers, and each lecturer has attributes like staff number, office number, staff name, title, and a list of courses they teach. Courses have attributes like course name, course code, and NQF level. The API should provide these functions:
+- Add a new lecturer
+- List all lecturers in the faculty
+- Update lecturer information
+- Get details of a lecturer by staff number
+- Delete a lecturer by staff number
+- List lecturers teaching a specific course
+- List lecturers sharing the same office.
 
-Note that the staff number should serve as a unique identifier for a lecturer.
-
-The task is to define the API following the OpenAPI standard and implement the client and service in the Ballerina language.
-
+Staff numbers are unique identifiers for lecturers. The API should adhere to the OpenAPI standard and be implemented in the Ballerina language.
 For Q-2:
 
-The task is to design and implement a library system using gRPC that allows two types of users— a student and a librarian—to interact with the system. The system should provide essential functionalities for managing books, borrowing them, and returning them. The student should be able to get a list of available books, borrow a book, search for a book, locate it, and return a book. On the other hand, a librarian should be able to add a book, update a book, remove a book, and list all the borrowed books. In short, we have the following operations: • add_book, where the librarian creates a book. The books should have the following fields: title, author_1, optional author_2, location of the book in library, ISBN (International Standard Book Number), and status, if the book is available or not. This operation should return the ISBN for the added book. • create_users, where several users, each with a specific profile, are created. The users are streamed to the server, and the response is returned once the operation completes. • update-book, where the librarian alters the details of the given book. • remove-book, where the librarian removes a book from the collection of library books. The function should return the new list of books after the book have been removed. • List_avaialable_books, where a student gets a list of all the available books. • locate_book, where a student searches for a book based on their ISBN. If the book is available, the function should return the location of the book; otherwise, tell the student that the book is not available. • borrow-book, where a student borrows a book by providing their user ID and the book's ISBN.
+The goal is to create a library system using gRPC for two types of users: students and librarians. Students can view available books, borrow, search, locate, and return books. Librarians can add, update, remove books, and list borrowed ones. Key operations include:
 
-The task is to define a protocol buffer contract with the remote functions and implement both the client and the server in the Ballerina Language.
+- add_book: Librarian adds a book with title, authors, location, ISBN, and availability, returning the ISBN.
+- create_users: Multiple users with different profiles are created and streamed to the server.
+- update-book: Librarian modifies book details.
+- remove-book: Librarian deletes a book, returning the updated book list.
+- List_available_books: Students get a list of available books.
+- locate_book: Students search for a book by ISBN and get its location if available.
+- borrow-book: Students borrow a book with their user ID and the book's ISBN.
 
-##NB: The clients should be able to use the generated gRPC client code to connect to the server and perform operations as implemented in the service. Clients should be able to handle user input and display relevant information to the user.
+The task involves defining a protocol buffer contract and implementing client and server in Ballerina. Clients should use the generated gRPC client code for operations, handle user input, and display relevant information.
 

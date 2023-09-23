@@ -1,10 +1,7 @@
 # DSA_Assignment_1_2023-X3000
 Distributed Systems and Applications Assignment 1 on Restful APIs and Remote Invocation with Ballerina 
-# Library-system-using-gRPC-in-ballerina
-A library system using gRPC, and a restful API in ballerina.
 
-
-For Q-1:
+# Q1: Restful API.
 
 The goal is to create a Restful API to manage staff, offices, and courses within the Faculty of Computing and Informatics. Offices can have multiple lecturers, and each lecturer has attributes like staff number, office number, staff name, title, and a list of courses they teach. Courses have attributes like course name, course code, and NQF level. The API should provide these functions:
 - Add a new lecturer
@@ -16,7 +13,8 @@ The goal is to create a Restful API to manage staff, offices, and courses within
 - List lecturers sharing the same office.
 
 Staff numbers are unique identifiers for lecturers. The API should adhere to the OpenAPI standard and be implemented in the Ballerina language.
-For Q-2:
+
+# Q2: Library System Using gRPC
 
 The goal is to create a library system using gRPC for two types of users: students and librarians. Students can view available books, borrow, search, locate, and return books. Librarians can add, update, remove books, and list borrowed ones. Key operations include:
 

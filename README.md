@@ -1,10 +1,10 @@
 # DSA_Assignment_1_2023-X3000
 Distributed Systems and Applications Assignment 1 on Restful APIs and Remote Invocation with Ballerina 
 
-STUDENT NAMES
-1 ROBERT V.N THOMAS 220108129
-2 Peter IK Haufiku  217098010
-3 Gifty Muhinda   217109187
+STUDENT NAMES:
+(1) ROBERT V.N THOMAS 220108129
+(2) Peter IK Haufiku  217098010
+(3) Gifty Muhinda   217109187
 
 Q1: Faculty Management System using a Restful API.
 

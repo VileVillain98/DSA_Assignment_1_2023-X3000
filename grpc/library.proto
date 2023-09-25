@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+service Library {
+    rpc AddBook(AddBookRequest) returns (AddBookResponse);
+    rpc CreateUsers(stream User) returns (CreateUsersResponse);
+    rpc UpdateBook(UpdateBookRequest) returns (UpdateBookResponse);
+    rpc RemoveBook(RemoveBookRequest) returns (RemoveBookResponse);
+    rpc ListAvailableBooks(ListAvailableBooksRequest) returns (ListAvailableBooksResponse);
+    rpc LocateBook(LocateBookRequest) returns (LocateBookResponse);
+    rpc BorrowBook(BorrowBookRequest) returns (BorrowBookResponse);
+}
+
+message Book {
+    string title = 1;
+    string author_1 = 2;
+    string author_2 = 3; // This is optional
+    string location = 4;
+    string ISBN = 5;
+    bool status = 6; // true means available, false means borrowed
+}
+
+message User {
+    string user_id = 1;
+    UserProfile profile = 2;
+}
+
+enum UserProfile {
+    STUDENT = 0;
+    LIBRARIAN = 1;
+}
+
+message AddBookRequest {
+    Book book = 1;
+}
+
+message AddBookResponse {
+    string ISBN = 1;
+}
+
+message CreateUsersResponse {
+    string status = 1;
+}
+
+message UpdateBookRequest {
+    Book book = 1;
+}
+
+message UpdateBookResponse {
+    string status = 1;
+}
+
+message RemoveBookRequest {
+    string ISBN = 1;
+}
+
+message RemoveBookResponse {
+    repeated Book books = 1;
+}
+
+message ListAvailableBooksRequest {}
+
+message ListAvailableBooksResponse {
+    repeated Book books = 1;
+}
+
+message LocateBookRequest {
+    string ISBN = 1;
+}
+
+message LocateBookResponse {
+    string location = 1;
+    bool status = 2;
+}
+
+message BorrowBookRequest {
+    string user_id = 1;
+    string ISBN = 2;
+}
+
+message BorrowBookResponse {
+    string status = 1;
+}

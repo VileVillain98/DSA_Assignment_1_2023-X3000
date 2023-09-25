@@ -5,7 +5,7 @@
 
 [ballerina]
 dependencies-toml-version = "2"
-distribution-version = "2201.7.2"
+distribution-version = "2201.7.1"
 
 [[package]]
 org = "ballerina"
@@ -307,7 +307,7 @@ modules = [
 
 [[package]]
 org = "matheusmulundu"
-name = "api_service"
+name = "api_client"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -316,6 +316,6 @@ dependencies = [
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "matheusmulundu", packageName = "api_service", moduleName = "api_service"}
+	{org = "matheusmulundu", packageName = "api_client", moduleName = "api_client"}
 ]
 
